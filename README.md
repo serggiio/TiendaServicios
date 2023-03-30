@@ -31,6 +31,7 @@ docker network connect microservicenet upbeat_robinson
 - docker run --name mysql-db -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=mySql mysql
 - docker exec -it mysql-db bash
 - mysql -uroot -pmySql
+- docker network connect microservicenet mysql-db
 
 
 - dotnet ef migrations add MigracionMySqlInicial --project TiendaServicios.Api.CarritoCompra
